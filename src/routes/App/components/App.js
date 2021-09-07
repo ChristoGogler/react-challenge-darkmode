@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import "../styles/_app.scss";
 
 function App() {
@@ -30,7 +30,10 @@ function App() {
                     className="app__dark-mode-btn icon level-right"
                     onClick={toggleTheme}
                 >
-                    <FontAwesomeIcon icon={faMoon} />
+                    <FontAwesomeIcon
+                        icon={darktheme ? faSun : faMoon}
+                        color={darktheme ? "#FFA500" : ""}
+                    />
                 </button>
             </div>
 
